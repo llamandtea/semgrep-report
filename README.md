@@ -2,7 +2,6 @@
 
 A modern, interactive HTML viewer for Semgrep JSON reports that makes security findings easy to understand and navigate.
 
-![Semgrep Report Viewer Screenshot](screenshot.png)
 
 ## Features
 
