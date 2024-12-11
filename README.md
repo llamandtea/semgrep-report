@@ -2,6 +2,7 @@
 
 A modern, interactive HTML viewer for Semgrep JSON reports that makes security findings easy to understand and navigate.
 
+![Semgrep Report Viewer Screenshot](https://github.com/xsafetech/semgrep-report/blob/main/iShot_2024-12-11_14.10.45.png)
 
 ## Features
 
