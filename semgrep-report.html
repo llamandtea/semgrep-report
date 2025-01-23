@@ -104,6 +104,15 @@
             }
         });
 
+        const escapeHtml = (unsafe) => {
+            return unsafe
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+            .replaceAll("'", '&#039;')
+        }
+
         function updateStats(findings) {
             document.getElementById('total-findings').textContent = findings.length;
             document.getElementById('high-findings').textContent = findings.filter(f => f.severity === 'HIGH').length;
@@ -145,7 +154,7 @@
                     </div>
 
                     <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-                        <pre class="text-sm text-gray-100">${finding.code.content}</pre>
+                        <pre class="text-sm text-gray-100">${escapeHtml(finding.code.content).trim()}</pre>
                     </div>
                 `;
                 
